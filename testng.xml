@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DHS-Kudos" parallel="false" preserve-order="true">
+    <parameter name="environment" value="http://green.linktecflash.com/DHSFlash" />
+    <parameter name="browser" value="chrome" />
+    <test name="SmokeTestChrome">
+        <classes>
+        	<class name="dhsFlashSmokeTests.DHSFlashSmokeTests.CheckHomePage" />
+        </classes>
+    </test>
+	<parameter name="browser" value="firefox" />
+    <test name="SmokeTestFirefox">
+        <classes>
+        	<class name="dhsFlashSmokeTests.DHSFlashSmokeTests.CheckHomePage" />
+        </classes>
+    </test>
+</suite>
