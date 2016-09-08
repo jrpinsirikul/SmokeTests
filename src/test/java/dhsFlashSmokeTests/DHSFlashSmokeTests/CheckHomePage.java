@@ -8,24 +8,24 @@ import static org.junit.Assert.*;
 public class CheckHomePage extends AbstractTest {
 	Home homePage;
 	String homeMessage = "Send some Kudos";
+	String pageTitle = "Home | kudos";
 
 	@Test (priority = 0)
 	public void checkPageLoad() {
 		homePage = new Home(driver);
-		waitDriver.until(ExpectedConditions.visibilityOf(homePage.getHomeMessage()));
-		assertEquals(homeMessage, homePage.getMessageText());
+		assertEquals(pageTitle, homePage.getPageTitle());
 	}
 	
 	@Test (priority = 1)
-	public void checkKudosLevels() {
-		assertTrue(homePage.getKudosBronze().isDisplayed());
-		assertTrue(homePage.getKudosSilver().isDisplayed());
-		assertTrue(homePage.getKudosGold().isDisplayed());
+	public void checkInHomePage() {
+		waitDriver.until(ExpectedConditions.visibilityOf(homePage.getHomePage()));
+		assertTrue(homePage.getHomePage().isDisplayed());
 	}
 	
 	@Test (priority = 2)
-	public void checkSubmitButton() {
-		assertTrue(homePage.getSubmitButton().isDisplayed());
+	public void checkHomeContent() {
+		waitDriver.until(ExpectedConditions.visibilityOf(homePage.getHomeContent()));
+		assertTrue(homePage.getHomeContent().isDisplayed());
 	}
 }
 
