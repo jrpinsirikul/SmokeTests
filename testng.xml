@@ -8,10 +8,4 @@
         	<class name="dhsFlashSmokeTests.DHSFlashSmokeTests.CheckHomePage" />
         </classes>
     </test>
-	<parameter name="browser" value="firefox" />
-    <test name="SmokeTestFirefox">
-        <classes>
-        	<class name="dhsFlashSmokeTests.DHSFlashSmokeTests.CheckHomePage" />
-        </classes>
-    </test>
 </suite>
